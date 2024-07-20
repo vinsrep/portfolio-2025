@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent's Website</title>
+    <!-- <link rel="stylesheet" href="../output.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/10.2.0/simpleicons.svg">
+    <script src="../js/lightgallery.umd.js"></script>
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/lightgallery-bundle.css" />
+    <style>
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+        }
+
+        .blurred {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<header class="sticky-navbar backdrop-blur-xl" id="navbar">
+    <div class="mt-8 mb-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+          <a class="block text-teal-600" href="../../index.html">
+            <span class="sr-only">Sertificates</span>
+            <img src="../../assets/nav.png" class="h-10" alt="Me" style="border-radius: 100%;">
+          </a>
+        </div>
+  
+        <div class="md:flex md:items-center md:gap-12">
+          <nav aria-label="Global" class="hidden md:block">
+            <ul class="flex items-center gap-6 text-sm">
+              <li>
+                <a class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" href="../../index.html"> About </a>
+              </li>
+              <li>
+                <a class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" href="education.html"> Education </a>
+              </li>
+  
+              <li>
+                <a class="block rounded-lg px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" href="projects.html"> Projects </a>
+              </li>
+  
+              <li>
+                <a class="block rounded-lg bg-gray-100 px-3 py-2 text-sm font-medium text-gray-800" href="#"> Sertificates </a>
+              </li>
+  
+            </ul>
+          </nav>
+
+ 
+   
+              <div x-data="{ showDropdown: false }" class="block md:hidden">
+                <button @click="showDropdown = !showDropdown" class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+                <div x-cloak x-show="showDropdown">
+                    <ul class="mt-20 space-y-1 bg-gray-50 rounded-lg z-50 relative">
+                      <button @click="showDropdown = !showDropdown" class="float-right rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75" >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M 5 5 L 20 20 M 5 20 L 20 5" />
+                          </svg>
+                        </button>
+                      <li>
+                        <a class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" href="../../index.html">About</a>
+                      </li>
+                     
+                      <li>
+                        <a class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" href="education.html"> Education </a>
+                      </li>
+               
+                      <li>
+                        <a class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" href="projects.html"> Projects </a>
+                      </li>
+                      <li>
+                        <a class="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-800" href="#"> Certificates </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</header>
+<!-- pagination -->
+<div class="mt-0 mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div class="inline-flex items-center justify-center gap-3">
+      <button id="prev-page"
+        class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900">
+        <span class="sr-only">Previous Page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+          <path
+          fill-rule="evenodd"
+          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+          clip-rule="evenodd"/>
+        </svg>
+      </button>
+       
+      <p id="page-info" class="text-xs text-gray-900">
+        1
+        <span class="mx-0.25">/</span>
+        1
+      </p>
+       
+      <button id="next-page"
+        class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900">
+        <span class="sr-only">Next Page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+          <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </div>
+</div>
+<!-- certificates -->
+<div id="certificates-container" class="page-1 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+  <div id="t1" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/analyst.jpeg" alt="">
+  </div>
+  <div id="t2" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/sql.jpeg" alt="">
+  </div>
+  <div id="t3" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/dqlab.jpeg" alt="">
+  </div>
+  <div id="t4" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/k3.jpeg" alt="">
+  </div>
+  <div id="t5" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/toeic.jpg" alt="">
+  </div>
+  <div id="t6" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/tmdc.jpeg" alt="">
+  </div>
+  <div id="t7" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/toeicwk_01.jpg" alt="">
+  </div>
+  <div id="t8" class="h-65 rounded-lg bg-gray-200 border-solid border-2">
+      <img class="rounded-lg w-full h-full cursor-pointer" src="../../assets/sertificates/ukbi_01.jpg" alt="">
+  </div>
+  <!-- Add more certificates here -->
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const itemsPerPage = 6;
+      const certificatesContainer = document.getElementById('certificates-container');
+      const certificates = Array.from(certificatesContainer.children);
+      const totalPages = Math.ceil(certificates.length / itemsPerPage);
+      const pageInfo = document.getElementById('page-info');
+      const prevPageBtn = document.getElementById('prev-page');
+      const nextPageBtn = document.getElementById('next-page');
+      let currentPage = 1;
+  
+      function showPage(page) {
+          const start = (page - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+          certificates.forEach((item, index) => {
+              item.style.display = index >= start && index < end ? 'block' : 'none';
+          });
+          pageInfo.textContent = `${page} / ${totalPages}`;
+          if(currentPage > 1){
+            lightGallery(document.getElementById('certificates-container'), {
+                selector: '.rounded-lg img'
+            });
+          }
+        }
+
+  
+      function updateButtons() {
+          prevPageBtn.disabled = currentPage === 1;
+          nextPageBtn.disabled = currentPage === totalPages;
+      }
+  
+      prevPageBtn.addEventListener('click', () => {
+          if (currentPage > 1) {
+              currentPage--;
+              showPage(currentPage);
+              updateButtons();
+          }
+      });
+  
+      nextPageBtn.addEventListener('click', () => {
+          if (currentPage < totalPages) {
+              currentPage++;
+              showPage(currentPage);
+              updateButtons();
+          }
+      });
+  
+      showPage(currentPage);
+      updateButtons();
+  });
+  </script>
+  
+</body>
+<script src="../js/script.js"></script>
+</html>
