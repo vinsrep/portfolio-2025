@@ -93,10 +93,10 @@ function App() {
 
       <Layout>
         <Section id="hero" className="items-start">
-          <h1 className="cursor-target text-6xl md:text-8xl font-heading font-bold leading-tight">
+          <h1 className="cursor-target text-5xl md:text-8xl font-heading font-bold leading-tight">
             <TextReveal text="BUILDING" delay={0.1} />
             <span className="cursor-target text-transparent bg-clip-text bg-gradient-to-r from-electric-cyan to-neon-purple block">
-              <TextReveal text="THE FUTURE" delay={0.3} />
+              <TextReveal text="THE FUTURE" delay={0.2} />
             </span>
           </h1>
           <p className="cursor-target mt-6 text-lg md:text-xl text-white/60 max-w-lg">
