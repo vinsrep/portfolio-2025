@@ -32,7 +32,7 @@ const TabbedProfile: React.FC = () => {
                 <div className="h-64 md:h-full w-full bg-white/5 rounded-xl border border-white/10 overflow-hidden relative group">
                     <div className="absolute inset-0 bg-gradient-to-t from-void-black/80 to-transparent z-10" />
                     <img
-                        src="public/assets/pictures/project-placeholder.jpg"
+                        src="assets/pictures/project-placeholder.jpg"
                         alt="Profile image"
                         className="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 group-hover:opacity-75"
                     />
@@ -79,7 +79,7 @@ const TabbedProfile: React.FC = () => {
                     Download my full resume to see a detailed history of my experience and skills.
                 </p>
                 <a
-                    href="public/assets/pdf/resume.pdf"
+                    href="assets/pdf/resume.pdf"
                     target="_blank"
                     className="cursor-none px-6 py-3 bg-electric-cyan/10 border border-electric-cyan text-electric-cyan font-mono rounded hover:bg-electric-cyan/20 transition-colors flex items-center gap-2"
                 >
